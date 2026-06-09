@@ -1,0 +1,5 @@
+member_id,first_name,tier,birthday,nth_visit_count,favorite_flavor_category,favorite_modifier,preferred_channel,opt_in_status,weather_condition,temperature_f
+TSC_001,Marcus,VIP,06-09,49,Green,Chia Seeds,App Push,True,Hot/Sunny,88
+TSC_002,Elena,Orange,11-12,12,Tropical,Extra Ginger,Email,True,Rainy,65
+TSC_003,Marcus,VIP,06-09,49,Green,Chia Seeds,App Push,True,Hot/Sunny,88
+TSC_004,Sarah,loyalty_member,04-20,5,Creamy,Whey Protein,App Push,False,Overcast,72
