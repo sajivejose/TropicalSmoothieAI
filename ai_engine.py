@@ -1,6 +1,10 @@
 import os
-from openai import OpenAI
 import json
+from dotenv import load_dotenv
+from openai import OpenAI
+
+# Load environment variables
+load_dotenv()
 
 class PromptFactory:
     SYSTEM_PROMPT = """
@@ -26,15 +30,22 @@ class PromptFactory:
         """Returns OpenAI client configured for either OpenAI API or local Ollama."""
         use_ollama = os.environ.get("USE_OLLAMA", "true").lower() == "true"
         
+        print(f"[DEBUG] USE_OLLAMA: {use_ollama}")
+        
         if use_ollama:
             # Use local Ollama server
+            print("[INFO] Using Ollama (local)")
             return OpenAI(
                 api_key="ollama",  # Dummy key for local Ollama
                 base_url="http://localhost:11434/v1"
             ), "ollama"
         else:
             # Use OpenAI API
-            return OpenAI(api_key=os.environ.get("OPENAI_API_KEY")), "openai"
+            api_key = os.environ.get("OPENAI_API_KEY")
+            if not api_key:
+                raise ValueError("OPENAI_API_KEY not set and USE_OLLAMA is false")
+            print("[INFO] Using OpenAI API")
+            return OpenAI(api_key=api_key), "openai"
 
     @staticmethod
     def generate_offer(context: dict) -> dict:
@@ -57,6 +68,7 @@ class PromptFactory:
         """
 
         try:
+            print(f"[INFO] Generating offer using {provider} ({model})...")
             response = client.chat.completions.create(
                 model=model,
                 messages=[
@@ -81,7 +93,7 @@ class PromptFactory:
                 }
                 
         except Exception as e:
-            print(f"Error calling {provider}: {str(e)}")
+            print(f"[ERROR] Error calling {provider}: {str(e)}")
             # Return mock data on error
             return {
                 "subject_line": "🌴 Celebrate Your Milestone! 🌴",
