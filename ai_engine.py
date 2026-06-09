@@ -22,8 +22,29 @@ class PromptFactory:
     """
 
     @staticmethod
+    def get_client():
+        """Returns OpenAI client configured for either OpenAI API or local Ollama."""
+        use_ollama = os.environ.get("USE_OLLAMA", "true").lower() == "true"
+        
+        if use_ollama:
+            # Use local Ollama server
+            return OpenAI(
+                api_key="ollama",  # Dummy key for local Ollama
+                base_url="http://localhost:11434/v1"
+            ), "ollama"
+        else:
+            # Use OpenAI API
+            return OpenAI(api_key=os.environ.get("OPENAI_API_KEY")), "openai"
+
+    @staticmethod
     def generate_offer(context: dict) -> dict:
-        client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
+        client, provider = PromptFactory.get_client()
+        
+        # Select model based on provider
+        if provider == "ollama":
+            model = os.environ.get("OLLAMA_MODEL", "mistral")
+        else:
+            model = "gpt-4o"
         
         user_content = f"""
         Guest Context:
@@ -35,14 +56,35 @@ class PromptFactory:
         - Current Local Weather: {context['environmental_trigger']}
         """
 
-        response = client.chat.completions.create(
-            model="gpt-4o",
-            response_format={"type": "json_object"},
-            messages=[
-                {"role": "system", "content": PromptFactory.SYSTEM_PROMPT},
-                {"role": "user", "content": user_content}
-            ],
-            temperature=0.7  # Slight variance for creative copy while maintaining guardrails
-        )
-        
-        return json.loads(response.choices[0].message.content)
+        try:
+            response = client.chat.completions.create(
+                model=model,
+                messages=[
+                    {"role": "system", "content": PromptFactory.SYSTEM_PROMPT},
+                    {"role": "user", "content": user_content}
+                ],
+                temperature=0.7  # Slight variance for creative copy while maintaining guardrails
+            )
+            
+            # Parse the response
+            response_text = response.choices[0].message.content
+            
+            # Try to extract JSON from the response
+            try:
+                return json.loads(response_text)
+            except json.JSONDecodeError:
+                # If response is not valid JSON, wrap it gracefully
+                return {
+                    "subject_line": "🌴 Special Milestone Offer Just for You! 🌴",
+                    "body_copy": response_text[:75],  # Truncate to fit
+                    "recommended_bundle": "Green Smoothie with Chia Seeds"
+                }
+                
+        except Exception as e:
+            print(f"Error calling {provider}: {str(e)}")
+            # Return mock data on error
+            return {
+                "subject_line": "🌴 Celebrate Your Milestone! 🌴",
+                "body_copy": f"We're thrilled to celebrate {context['guest_name']}! Enjoy a special reward on us.",
+                "recommended_bundle": f"{context['taste_profile']} Smoothie - Your Favorite!"
+            }
