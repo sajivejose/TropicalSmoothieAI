@@ -19,3 +19,133 @@ TSC_017,Patricia,VIP,02-28,200,Berry,None,Email,True,Rainy,64
 TSC_018,Andrew,Orange,09-05,19,Tropical,Whey Protein,App Push,True,Overcast,72
 TSC_019,Susan,loyalty_member,01-10,6,Green,Chia Seeds,Email,False,Hot/Sunny,89
 TSC_020,Joseph,VIP,07-18,132,Creamy,Chia Seeds,App Push,True,Rainy,68
+TSC_021,Rachel,VIP,06-10,55,Berry,Chia Seeds,App Push,True,Hot/Sunny,89
+TSC_022,Brian,Orange,06-08,42,Green,Whey Protein,Email,True,Overcast,76
+TSC_023,Linda,loyalty_member,06-09,18,Tropical,Extra Ginger,App Push,True,Hot/Sunny,91
+TSC_024,Thomas,VIP,06-11,67,Creamy,None,App Push,True,Rainy,65
+TSC_025,Barbara,Orange,06-07,24,Berry,Chia Seeds,Email,True,Hot/Sunny,87
+TSC_026,Richard,loyalty_member,06-12,9,Green,Whey Protein,App Push,True,Overcast,70
+TSC_027,Carol,VIP,06-06,98,Tropical,Extra Ginger,Email,True,Hot/Sunny,94
+TSC_028,Charles,Orange,06-09,31,Creamy,Chia Seeds,App Push,False,Rainy,62
+TSC_029,Janet,loyalty_member,06-13,14,Berry,None,Email,True,Overcast,68
+TSC_030,Steven,VIP,06-08,150,Green,Whey Protein,App Push,True,Hot/Sunny,92
+TSC_031,Maria,Orange,06-14,38,Tropical,Extra Ginger,App Push,True,Rainy,60
+TSC_032,Paul,loyalty_member,06-09,21,Creamy,Chia Seeds,Email,True,Hot/Sunny,88
+TSC_033,Nancy,VIP,06-05,76,Berry,None,App Push,True,Overcast,75
+TSC_034,Mark,Orange,06-16,27,Green,Whey Protein,Email,True,Hot/Sunny,90
+TSC_035,Lisa,loyalty_member,06-11,12,Tropical,Extra Ginger,App Push,True,Rainy,64
+TSC_036,Donald,VIP,06-09,55,Creamy,Chia Seeds,App Push,True,Hot/Sunny,89
+TSC_037,Sandra,Orange,06-18,41,Berry,None,Email,True,Overcast,72
+TSC_038,George,loyalty_member,06-09,19,Green,Whey Protein,App Push,True,Hot/Sunny,86
+TSC_039,Ashley,VIP,06-04,123,Tropical,Extra Ginger,Email,True,Rainy,63
+TSC_040,Kenneth,Orange,06-20,33,Creamy,Chia Seeds,App Push,True,Hot/Sunny,91
+TSC_041,Kimberly,loyalty_member,06-09,16,Berry,None,Email,True,Overcast,69
+TSC_042,Edward,VIP,06-09,88,Green,Whey Protein,App Push,True,Hot/Sunny,87
+TSC_043,Donna,Orange,06-22,29,Tropical,Extra Ginger,Email,True,Rainy,61
+TSC_044,Ronald,loyalty_member,06-09,23,Creamy,Chia Seeds,App Push,True,Hot/Sunny,88
+TSC_045,Michelle,VIP,06-09,167,Berry,None,App Push,True,Overcast,71
+TSC_046,Timothy,Orange,06-24,36,Green,Whey Protein,Email,True,Hot/Sunny,93
+TSC_047,Melissa,loyalty_member,06-09,20,Tropical,Extra Ginger,App Push,True,Rainy,65
+TSC_048,Jason,VIP,06-03,95,Creamy,Chia Seeds,Email,True,Hot/Sunny,89
+TSC_049,Deborah,Orange,06-26,44,Berry,None,App Push,True,Overcast,74
+TSC_050,Jeffrey,loyalty_member,06-09,17,Green,Whey Protein,Email,True,Hot/Sunny,85
+TSC_051,Stephanie,VIP,06-09,134,Tropical,Extra Ginger,App Push,True,Rainy,64
+TSC_052,Ryan,Orange,06-28,39,Creamy,Chia Seeds,Email,True,Hot/Sunny,90
+TSC_053,Rebecca,loyalty_member,06-09,24,Berry,None,App Push,True,Overcast,70
+TSC_054,Jacob,VIP,06-02,77,Green,Whey Protein,App Push,True,Hot/Sunny,88
+TSC_055,Sharon,Orange,06-30,32,Tropical,Extra Ginger,Email,True,Rainy,62
+TSC_056,Gary,loyalty_member,06-09,22,Creamy,Chia Seeds,App Push,True,Hot/Sunny,87
+TSC_057,Cynthia,VIP,06-09,145,Berry,None,Email,True,Overcast,72
+TSC_058,Nicholas,Orange,07-02,46,Green,Whey Protein,App Push,True,Hot/Sunny,92
+TSC_059,Kathleen,loyalty_member,06-09,15,Tropical,Extra Ginger,Email,True,Rainy,66
+TSC_060,Eric,VIP,06-01,102,Creamy,Chia Seeds,App Push,True,Hot/Sunny,89
+TSC_061,Shirley,Orange,07-04,34,Berry,None,Email,True,Overcast,73
+TSC_062,Jonathan,loyalty_member,06-09,25,Green,Whey Protein,App Push,True,Hot/Sunny,86
+TSC_063,Angela,VIP,06-09,156,Tropical,Extra Ginger,App Push,True,Rainy,63
+TSC_064,Stephen,Orange,07-06,43,Creamy,Chia Seeds,Email,True,Hot/Sunny,91
+TSC_065,Brenda,loyalty_member,06-09,13,Berry,None,App Push,True,Overcast,68
+TSC_066,Larry,VIP,06-09,89,Green,Whey Protein,Email,True,Hot/Sunny,88
+TSC_067,Anna,Orange,07-08,37,Tropical,Extra Ginger,App Push,True,Rainy,61
+TSC_068,Justin,loyalty_member,06-09,28,Creamy,Chia Seeds,Email,True,Hot/Sunny,85
+TSC_069,Pamela,VIP,05-31,178,Berry,None,App Push,True,Overcast,74
+TSC_070,Scott,Orange,07-10,45,Green,Whey Protein,Email,True,Hot/Sunny,93
+TSC_071,Emma,loyalty_member,06-09,19,Tropical,Extra Ginger,App Push,True,Rainy,67
+TSC_072,Brandon,VIP,06-09,112,Creamy,Chia Seeds,App Push,True,Hot/Sunny,89
+TSC_073,Nicole,Orange,07-12,30,Berry,None,Email,True,Overcast,71
+TSC_074,Benjamin,loyalty_member,06-09,21,Green,Whey Protein,App Push,True,Hot/Sunny,84
+TSC_075,Diana,VIP,06-09,167,Tropical,Extra Ginger,Email,True,Rainy,62
+TSC_076,Samuel,Orange,07-14,48,Creamy,Chia Seeds,App Push,True,Hot/Sunny,92
+TSC_077,Julie,loyalty_member,06-09,18,Berry,None,Email,True,Overcast,69
+TSC_078,Frank,VIP,05-30,98,Green,Whey Protein,App Push,True,Hot/Sunny,87
+TSC_079,Joyce,Orange,07-16,40,Tropical,Extra Ginger,Email,True,Rainy,64
+TSC_080,Gregory,loyalty_member,06-09,26,Creamy,Chia Seeds,App Push,True,Hot/Sunny,86
+TSC_081,Victoria,VIP,06-09,201,Berry,None,App Push,True,Overcast,75
+TSC_082,Alexander,Orange,07-18,35,Green,Whey Protein,Email,True,Hot/Sunny,90
+TSC_083,Lauren,loyalty_member,06-09,20,Tropical,Extra Ginger,App Push,True,Rainy,65
+TSC_084,Raymond,VIP,06-09,145,Creamy,Chia Seeds,Email,True,Hot/Sunny,88
+TSC_085,Evelyn,Orange,07-20,47,Berry,None,App Push,True,Overcast,72
+TSC_086,Patrick,loyalty_member,06-09,23,Green,Whey Protein,Email,True,Hot/Sunny,83
+TSC_087,Mildred,VIP,05-29,111,Tropical,Extra Ginger,App Push,True,Rainy,61
+TSC_088,Jack,Orange,07-22,42,Creamy,Chia Seeds,Email,True,Hot/Sunny,91
+TSC_089,Judith,loyalty_member,06-09,14,Berry,None,App Push,True,Overcast,70
+TSC_090,Dennis,VIP,06-09,189,Green,Whey Protein,App Push,True,Hot/Sunny,89
+TSC_091,Rosa,Orange,07-24,39,Tropical,Extra Ginger,Email,True,Rainy,63
+TSC_092,Jerry,loyalty_member,06-09,27,Creamy,Chia Seeds,App Push,True,Hot/Sunny,87
+TSC_093,Kathryn,VIP,06-09,156,Berry,None,Email,True,Overcast,73
+TSC_094,Samuel,Orange,07-26,44,Green,Whey Protein,App Push,True,Hot/Sunny,92
+TSC_095,Rose,loyalty_member,06-09,16,Tropical,Extra Ginger,Email,True,Rainy,66
+TSC_096,Peter,VIP,05-28,134,Creamy,Chia Seeds,App Push,True,Hot/Sunny,88
+TSC_097,Alice,Orange,07-28,38,Berry,None,Email,True,Overcast,71
+TSC_098,Harold,loyalty_member,06-09,22,Green,Whey Protein,App Push,True,Hot/Sunny,85
+TSC_099,Ann,VIP,06-09,178,Tropical,Extra Ginger,App Push,True,Rainy,62
+TSC_100,Walter,Orange,07-30,51,Creamy,Chia Seeds,Email,True,Hot/Sunny,93
+TSC_101,Doris,loyalty_member,06-09,24,Berry,None,App Push,True,Overcast,69
+TSC_102,Jean,VIP,06-09,195,Green,Whey Protein,Email,True,Hot/Sunny,89
+TSC_103,Frances,Orange,08-01,36,Tropical,Extra Ginger,App Push,True,Rainy,64
+TSC_104,Roy,loyalty_member,06-09,19,Creamy,Chia Seeds,App Push,True,Hot/Sunny,86
+TSC_105,Mary,VIP,05-27,167,Berry,None,Email,True,Overcast,74
+TSC_106,Louis,Orange,08-03,43,Green,Whey Protein,App Push,True,Hot/Sunny,91
+TSC_107,Ruth,loyalty_member,06-09,28,Tropical,Extra Ginger,Email,True,Rainy,65
+TSC_108,Ralph,VIP,06-09,212,Creamy,Chia Seeds,App Push,True,Hot/Sunny,88
+TSC_109,Catherine,Orange,08-05,37,Berry,None,Email,True,Overcast,72
+TSC_110,Roy,loyalty_member,06-09,21,Green,Whey Protein,App Push,True,Hot/Sunny,84
+TSC_111,Christine,VIP,06-09,134,Tropical,Extra Ginger,App Push,True,Rainy,63
+TSC_112,George,Orange,08-07,49,Creamy,Chia Seeds,Email,True,Hot/Sunny,92
+TSC_113,Diane,loyalty_member,06-09,17,Berry,None,App Push,True,Overcast,70
+TSC_114,Alan,VIP,05-26,176,Green,Whey Protein,Email,True,Hot/Sunny,87
+TSC_115,Helen,Orange,08-09,41,Tropical,Extra Ginger,App Push,True,Rainy,64
+TSC_116,Wayne,loyalty_member,06-09,25,Creamy,Chia Seeds,App Push,True,Hot/Sunny,86
+TSC_117,Joyce,VIP,06-09,201,Berry,None,Email,True,Overcast,75
+TSC_118,Arthur,Orange,08-11,46,Green,Whey Protein,App Push,True,Hot/Sunny,90
+TSC_119,Olivia,loyalty_member,06-09,20,Tropical,Extra Ginger,Email,True,Rainy,65
+TSC_120,Billy,VIP,06-09,156,Creamy,Chia Seeds,App Push,True,Hot/Sunny,88
+TSC_121,Alice,Orange,08-13,34,Berry,None,Email,True,Overcast,71
+TSC_122,Bruce,loyalty_member,06-09,23,Green,Whey Protein,App Push,True,Hot/Sunny,83
+TSC_123,Dorothy,VIP,05-25,189,Tropical,Extra Ginger,App Push,True,Rainy,62
+TSC_124,Joe,Orange,08-15,44,Creamy,Chia Seeds,Email,True,Hot/Sunny,91
+TSC_125,Abigail,loyalty_member,06-09,14,Berry,None,App Push,True,Overcast,69
+TSC_126,David,VIP,06-09,234,Green,Whey Protein,Email,True,Hot/Sunny,89
+TSC_127,Hannah,Orange,08-17,39,Tropical,Extra Ginger,App Push,True,Rainy,63
+TSC_128,Roger,loyalty_member,06-09,27,Creamy,Chia Seeds,Email,True,Hot/Sunny,87
+TSC_129,Emily,VIP,06-09,167,Berry,None,App Push,True,Overcast,73
+TSC_130,Carl,Orange,08-19,45,Green,Whey Protein,Email,True,Hot/Sunny,92
+TSC_131,Samantha,loyalty_member,06-09,16,Tropical,Extra Ginger,App Push,True,Rainy,66
+TSC_132,Jerry,VIP,05-24,145,Creamy,Chia Seeds,App Push,True,Hot/Sunny,88
+TSC_133,Sarah,Orange,08-21,38,Berry,None,Email,True,Overcast,71
+TSC_134,Tom,loyalty_member,06-09,22,Green,Whey Protein,App Push,True,Hot/Sunny,85
+TSC_135,Grace,VIP,06-09,198,Tropical,Extra Ginger,Email,True,Rainy,62
+TSC_136,Pete,Orange,08-23,50,Creamy,Chia Seeds,App Push,True,Hot/Sunny,93
+TSC_137,Avery,loyalty_member,06-09,24,Berry,None,Email,True,Overcast,69
+TSC_138,Dan,VIP,06-09,156,Green,Whey Protein,App Push,True,Hot/Sunny,89
+TSC_139,Lucy,Orange,08-25,40,Tropical,Extra Ginger,Email,True,Rainy,64
+TSC_140,Henry,loyalty_member,06-09,19,Creamy,Chia Seeds,App Push,True,Hot/Sunny,86
+TSC_141,Ella,VIP,05-23,212,Berry,None,Email,True,Overcast,74
+TSC_142,William,Orange,08-27,43,Green,Whey Protein,App Push,True,Hot/Sunny,91
+TSC_143,Scarlett,loyalty_member,06-09,28,Tropical,Extra Ginger,Email,True,Rainy,65
+TSC_144,Joe,VIP,06-09,234,Creamy,Chia Seeds,App Push,True,Hot/Sunny,88
+TSC_145,Violet,Orange,08-29,36,Berry,None,Email,True,Overcast,72
+TSC_146,Jim,loyalty_member,06-09,21,Green,Whey Protein,App Push,True,Hot/Sunny,84
+TSC_147,Aurora,VIP,06-09,189,Tropical,Extra Ginger,App Push,True,Rainy,63
+TSC_148,Bob,Orange,08-31,47,Creamy,Chia Seeds,Email,True,Hot/Sunny,92
+TSC_149,Bella,loyalty_member,06-09,17,Berry,None,App Push,True,Overcast,70
+TSC_150,Alex,VIP,05-22,167,Green,Whey Protein,Email,True,Hot/Sunny,87

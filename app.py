@@ -3,7 +3,7 @@ import datetime
 import os
 from dotenv import load_dotenv
 
-# Load environment variables from .env file
+# Load environment variables
 load_dotenv()
 
 from data_processor import DataPipeline
@@ -29,17 +29,45 @@ else:
 pipeline = DataPipeline("mock_data.csv")
 cleaned_data = pipeline.data_cleansing()
 
-# Simulate today's check (Marcus matches June 9th birthday based on 2026 calendar simulation)
-current_date = "06-09" 
-eligible_guests = pipeline.evaluate_milestones(current_date)
+# Simulate today's check
+current_date = "06-09"
+date_range = 7  # 7-day window for birthdays
+eligible_guests = pipeline.evaluate_milestones(current_date, date_range_days=date_range)
 
-st.sidebar.header("Pipeline Controls")
-st.sidebar.info(f"Processing execution date set to: {current_date}")
-st.sidebar.metric(label="Eligible Guest Triggers Found", value=len(eligible_guests))
+# Get pipeline statistics
+stats = pipeline.get_pipeline_stats()
+
+# Display pipeline statistics in sidebar
+st.sidebar.header("📊 Data Pipeline Stats")
+with st.sidebar.expander("Data Quality Metrics", expanded=True):
+    st.metric(label="Total Records Loaded", value=stats['total_records'])
+    st.metric(label="After Deduplication", value=stats['after_deduplication'])
+    st.metric(label="Opt-In Members", value=stats['opt_in_count'])
+    st.metric(label="Opt-Out (Filtered)", value=stats['opt_out_count'])
+    st.divider()
+    st.metric(label="Eligible for Offers", value=stats['eligible_offers'])
+    st.metric(label="Eligibility Rate", value=stats['eligibility_rate'])
+
+st.sidebar.header("🎯 Pipeline Controls")
+st.sidebar.info(f"Processing execution date: **{current_date}** (±{date_range} days window)")
+
+# Display filter info
+st.sidebar.markdown("### 🔍 Active Filters:")
+st.sidebar.markdown("""
+- ✅ **Opt-in Status**: Must be True
+- 🎂 **Birthday**: Within ±7 days
+- 🎯 **Visit Milestones**: 10, 25, 50, 100, 150, 200+
+- 🌞 **Weather**: Hot days + Tropical/Berry prefs
+- 🆕 **New Members**: <5 visits (acquisition)
+""")
 
 if not eligible_guests.empty:
+    # Main content area
+    st.markdown(f"### ✨ Found {len(eligible_guests)} Eligible Customers for Offers")
+    
     # Dropdown simulating the VA selector for TSC Associates
-    guest_options = {f"{row['first_name']} ({row['milestone_trigger']})": idx for idx, row in eligible_guests.iterrows()}
+    guest_options = {f"{row['first_name']} ({row['tier'].upper()}, {int(row['nth_visit_count'])} visits) - {row['milestone_trigger']}": idx 
+                     for idx, row in eligible_guests.iterrows()}
     selected_guest_label = st.selectbox("Select Active Loyalty Member Event:", list(guest_options.keys()))
     
     selected_idx = guest_options[selected_guest_label]
@@ -83,5 +111,16 @@ if not eligible_guests.empty:
                 except Exception as e:
                     st.error(f"❌ Error: {str(e)}")
                     st.info("💡 Make sure Ollama is running: `ollama serve` in another terminal")
+    
+    # Show feedback summary at bottom
+    if st.session_state.feedback_db:
+        st.divider()
+        st.subheader("📈 Session Feedback Summary")
+        approved = sum(1 for f in st.session_state.feedback_db if f['status'] == 'Approved')
+        rejected = sum(1 for f in st.session_state.feedback_db if f['status'] == 'Rejected')
+        col_a, col_b = st.columns(2)
+        col_a.metric("Approved Offers", approved)
+        col_b.metric("Rejected Offers", rejected)
 else:
-    st.write("No active milestone triggers for the specified window criteria.")
+    st.warning("⚠️ No eligible customers found with current filters.")
+    st.info(f"Tried to find customers with birthdays near {current_date} or visit milestones.")
