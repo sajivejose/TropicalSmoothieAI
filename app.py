@@ -1,5 +1,11 @@
 import streamlit as st
 import datetime
+import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
+
 from data_processor import DataPipeline
 from ai_engine import PromptFactory
 
@@ -10,6 +16,14 @@ if 'feedback_db' not in st.session_state:
 st.set_page_config(page_title="TSC Milestone Engine", layout="wide")
 st.title("🍹 Tropical Smoothie Cafe — Virtual Assistant Prototype")
 st.caption("Personalized 'Tropic' Milestone Offers Interface for TSC Associates")
+
+# Display which provider is being used
+use_ollama = os.environ.get("USE_OLLAMA", "true").lower() == "true"
+if use_ollama:
+    model = os.environ.get("OLLAMA_MODEL", "mistral")
+    st.sidebar.info(f"🤖 Running with: **Ollama** ({model})")
+else:
+    st.sidebar.info("🤖 Running with: **OpenAI API**")
 
 # Step 1: Run Pre-processing & Pipeline Simulation
 pipeline = DataPipeline("mock_data.csv")
@@ -42,28 +56,32 @@ if not eligible_guests.empty:
         st.subheader("✨ GenAI Generated Engine Outputs")
         if st.button("Run Engine & Generate Custom Bundle"):
             with st.spinner("AI Engine generating tailored bundles..."):
-                # Run the AI execution step
-                ai_output = PromptFactory.generate_offer(context)
-                
-                st.success("Generation Complete!")
-                st.metric(label="Target Delivery Method", value=context['channel'])
-                
-                # Render the copy cards
-                st.markdown(f"**Subject Line:** `{ai_output['subject_line']}`")
-                st.info(f"**Body Copy:**\n{ai_output['body_copy']}")
-                st.warning(f"🎁 **Tailored Reward Bundle:** {ai_output['recommended_bundle']}")
-                
-                # Step 5: Adaptive Feedback Loop (Bottom line item of diagram)
-                st.divider()
-                st.subheader("🔄 Feedback Loop & Adaptive Learning")
-                f_col1, f_col2 = st.columns(2)
-                with f_col1:
-                    if st.button("👍 Accept & Deploy to CRM"):
-                        st.session_state.feedback_db.append({"member_id": raw_guest_data['member_id'], "status": "Approved"})
-                        st.success("Sent directly via API to marketing distribution channel simulation.")
-                with f_col2:
-                    if st.button("👎 Reject Copy / Flag Guardrail"):
-                        st.session_state.feedback_db.append({"member_id": raw_guest_data['member_id'], "status": "Rejected"})
-                        st.error("Flagged. Copy metrics routed back into pre-processing adjustment engine.")
+                try:
+                    # Run the AI execution step
+                    ai_output = PromptFactory.generate_offer(context)
+                    
+                    st.success("Generation Complete!")
+                    st.metric(label="Target Delivery Method", value=context['channel'])
+                    
+                    # Render the copy cards
+                    st.markdown(f"**Subject Line:** `{ai_output['subject_line']}`")
+                    st.info(f"**Body Copy:**\n{ai_output['body_copy']}")
+                    st.warning(f"🎁 **Tailored Reward Bundle:** {ai_output['recommended_bundle']}")
+                    
+                    # Step 5: Adaptive Feedback Loop (Bottom line item of diagram)
+                    st.divider()
+                    st.subheader("🔄 Feedback Loop & Adaptive Learning")
+                    f_col1, f_col2 = st.columns(2)
+                    with f_col1:
+                        if st.button("👍 Accept & Deploy to CRM"):
+                            st.session_state.feedback_db.append({"member_id": raw_guest_data['member_id'], "status": "Approved"})
+                            st.success("Sent directly via API to marketing distribution channel simulation.")
+                    with f_col2:
+                        if st.button("👎 Reject Copy / Flag Guardrail"):
+                            st.session_state.feedback_db.append({"member_id": raw_guest_data['member_id'], "status": "Rejected"})
+                            st.error("Flagged. Copy metrics routed back into pre-processing adjustment engine.")
+                except Exception as e:
+                    st.error(f"❌ Error: {str(e)}")
+                    st.info("💡 Make sure Ollama is running: `ollama serve` in another terminal")
 else:
     st.write("No active milestone triggers for the specified window criteria.")
