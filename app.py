@@ -337,7 +337,8 @@ with tab3:
         with col1:
             st.subheader("📊 Status Distribution")
             status_counts = df['status'].value_counts()
-            st.pie_chart(status_counts)
+            # Use bar chart instead of pie chart for compatibility
+            st.bar_chart(status_counts)
         
         with col2:
             st.subheader("📈 Approval Trend by Date")
@@ -386,7 +387,7 @@ with tab3:
         st.subheader("⚠️ Guardrail Violations Summary")
         violation_keywords = {
             'Medical/Health Claim': ['medical', 'health', 'cure', 'lose weight', 'prevent'],
-            'Off-Brand Tone': ['tone', 'brand', 'voice', 'style'],
+            'Off-Brand Tone': ['tone', 'brand', 'voice', 'style', 'crazy', 'lit', 'yo', 'dude'],
             'Inaccurate': ['inaccurate', 'wrong', 'incorrect', 'false'],
         }
         
