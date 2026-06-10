@@ -68,18 +68,25 @@ st.sidebar.markdown("""
 - 🆕 **New Members**: <5 visits (acquisition)
 """)
 
-# Feedback database functions
+# Feedback database functions with UTF-8 encoding
 def load_feedback_log():
-    """Load feedback log from JSON file."""
+    """Load feedback log from JSON file with UTF-8 encoding."""
     if Path("feedback_log.json").exists():
-        with open("feedback_log.json", "r") as f:
-            return json.load(f)
+        try:
+            with open("feedback_log.json", "r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception as e:
+            st.error(f"Error loading feedback log: {str(e)}")
+            return []
     return []
 
 def save_feedback_log(feedback_list):
-    """Save feedback log to JSON file."""
-    with open("feedback_log.json", "w") as f:
-        json.dump(feedback_list, f, indent=2)
+    """Save feedback log to JSON file with UTF-8 encoding."""
+    try:
+        with open("feedback_log.json", "w", encoding="utf-8") as f:
+            json.dump(feedback_list, f, indent=2, ensure_ascii=False)
+    except Exception as e:
+        st.error(f"Error saving feedback log: {str(e)}")
 
 def add_feedback(member_id, first_name, tier, status, reason, offer_data, timestamp=None):
     """Add feedback record to persistent log."""
@@ -304,7 +311,7 @@ with tab2:
             )
         
         with col2:
-            json_str = json.dumps(feedback_log, indent=2)
+            json_str = json.dumps(feedback_log, indent=2, ensure_ascii=False)
             st.download_button(
                 label="📄 Download as JSON",
                 data=json_str,
