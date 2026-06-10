@@ -1,0 +1,210 @@
+[
+  {
+    "timestamp": "2026-06-09T08:15:00",
+    "member_id": "TSC_001",
+    "first_name": "Marcus",
+    "tier": "VIP",
+    "status": "Approved",
+    "reason": "Ready for deployment",
+    "offer": {
+      "subject_line": "🌴 Marcus, You're a Smoothie Legend! 🌴",
+      "body_copy": "50 visits of pure refreshment! To celebrate, here's your exclusive VIP reward: Free Green Power Smoothie with Chia Seeds - your favorite!",
+      "recommended_bundle": "Green Smoothie + Double Chia Seeds"
+    }
+  },
+  {
+    "timestamp": "2026-06-09T08:22:00",
+    "member_id": "TSC_021",
+    "first_name": "Rachel",
+    "tier": "VIP",
+    "status": "Rejected",
+    "reason": "Off-Brand Tone",
+    "offer": {
+      "subject_line": "Yo Rachel! Get Crazy with Our Berry Blast!! 🔥",
+      "body_copy": "This smoothie will BLOW YOUR MIND! It's absolutely insane and will change your life forever. Best offer ever!",
+      "recommended_bundle": "Berry Smoothie + Extra Chia"
+    }
+  },
+  {
+    "timestamp": "2026-06-09T08:45:00",
+    "member_id": "TSC_023",
+    "first_name": "Linda",
+    "tier": "loyalty_member",
+    "status": "Rejected",
+    "reason": "Medical/Health Claim",
+    "offer": {
+      "subject_line": "🌿 Linda, Boost Your Immunity Now! 🌿",
+      "body_copy": "Our special Green Smoothie with chia seeds can help prevent illness and cure inflammation. Medical studies show it reduces belly fat by 40%!",
+      "recommended_bundle": "Detox Green Smoothie"
+    }
+  },
+  {
+    "timestamp": "2026-06-09T09:10:00",
+    "member_id": "TSC_030",
+    "first_name": "Steven",
+    "tier": "VIP",
+    "status": "Approved",
+    "reason": "Ready for deployment",
+    "offer": {
+      "subject_line": "🏆 Steven, Milestone Champion Status Unlocked! 🏆",
+      "body_copy": "150 visits of smoothie perfection! Your loyalty means everything. Enjoy a complimentary VIP smoothie upgrade.",
+      "recommended_bundle": "Green Smoothie + Premium Whey Protein"
+    }
+  },
+  {
+    "timestamp": "2026-06-09T09:35:00",
+    "member_id": "TSC_036",
+    "first_name": "Donald",
+    "tier": "VIP",
+    "status": "Rejected",
+    "reason": "Missing Personalization",
+    "offer": {
+      "subject_line": "🎉 You Have a Special Offer! 🎉",
+      "body_copy": "We have a great deal for our valued customers. Get 20% off your next order.",
+      "recommended_bundle": "Any Smoothie"
+    }
+  },
+  {
+    "timestamp": "2026-06-09T10:05:00",
+    "member_id": "TSC_042",
+    "first_name": "Edward",
+    "tier": "VIP",
+    "status": "Rejected",
+    "reason": "Inaccurate Information",
+    "offer": {
+      "subject_line": "🍓 Edward, Your Birthday Berry Celebration! 🍓",
+      "body_copy": "Happy Birthday Edward! Enjoy your complimentary Tropical Smoothie - your favorite! (Note: Birthday is actually in October, not June)",
+      "recommended_bundle": "Tropical Smoothie"
+    }
+  },
+  {
+    "timestamp": "2026-06-09T10:30:00",
+    "member_id": "TSC_051",
+    "first_name": "Stephanie",
+    "tier": "VIP",
+    "status": "Approved",
+    "reason": "Ready for deployment",
+    "offer": {
+      "subject_line": "🌺 Stephanie, Your Platinum Tier Unlocked! 🌺",
+      "body_copy": "134 visits and counting! You've reached our exclusive Platinum tier. Enjoy early access to new tropical flavors and bonus reward points.",
+      "recommended_bundle": "Tropical Smoothie + Extra Ginger"
+    }
+  },
+  {
+    "timestamp": "2026-06-09T11:00:00",
+    "member_id": "TSC_057",
+    "first_name": "Cynthia",
+    "tier": "VIP",
+    "status": "Rejected",
+    "reason": "Poor Copy Quality",
+    "offer": {
+      "subject_line": "berry smoothie thing for Cynthia ok",
+      "body_copy": "you like berry so here is berry offer. its good. come get it. the price is good too. very good offer.",
+      "recommended_bundle": "berry thing"
+    }
+  },
+  {
+    "timestamp": "2026-06-09T11:25:00",
+    "member_id": "TSC_063",
+    "first_name": "Angela",
+    "tier": "VIP",
+    "status": "Rejected",
+    "reason": "Channel Mismatch",
+    "offer": {
+      "subject_line": "🌴 Angela, Special Email Offer 🌴",
+      "body_copy": "This is a detailed email with multiple paragraphs explaining our seasonal tropical smoothie collection and the nutritional benefits of each ingredient. Perfect for Email channel.",
+      "recommended_bundle": "Tropical Smoothie"
+    }
+  },
+  {
+    "timestamp": "2026-06-09T12:00:00",
+    "member_id": "TSC_072",
+    "first_name": "Brandon",
+    "tier": "VIP",
+    "status": "Approved",
+    "reason": "Ready for deployment",
+    "offer": {
+      "subject_line": "🔥 Brandon, Beat the Heat - Creamy Cool Down! 🔥",
+      "body_copy": "It's 89°F outside! Cool off with your favorite Creamy Smoothie. Special weather-triggered offer just for you today.",
+      "recommended_bundle": "Creamy Smoothie + Chia Seeds"
+    }
+  },
+  {
+    "timestamp": "2026-06-09T12:30:00",
+    "member_id": "TSC_084",
+    "first_name": "Raymond",
+    "tier": "VIP",
+    "status": "Rejected",
+    "reason": "Other/Custom",
+    "offer": {
+      "subject_line": "🎂 Raymond, Birthday Creamy Celebration! 🎂",
+      "body_copy": "Happy Birthday Raymond! Treat yourself with a complimentary Creamy Smoothie with your choice of modifiers.",
+      "recommended_bundle": "Creamy Smoothie + Chia Seeds"
+    }
+  },
+  {
+    "timestamp": "2026-06-09T13:00:00",
+    "member_id": "TSC_023",
+    "first_name": "Linda",
+    "tier": "loyalty_member",
+    "status": "Approved",
+    "reason": "Ready for deployment",
+    "offer": {
+      "subject_line": "🌟 Linda, You're Close to Orange Tier! 🌟",
+      "body_copy": "Just 7 more visits until you unlock Orange tier perks! Keep up the momentum with your favorite Tropical Smoothie.",
+      "recommended_bundle": "Tropical Smoothie + Extra Ginger"
+    }
+  },
+  {
+    "timestamp": "2026-06-09T13:45:00",
+    "member_id": "TSC_099",
+    "first_name": "Ann",
+    "tier": "VIP",
+    "status": "Approved",
+    "reason": "Ready for deployment",
+    "offer": {
+      "subject_line": "🏅 Ann, Your 178-Visit Milestone Awaits! 🏅",
+      "body_copy": "You're just visits away from hitting 200! As a token of our appreciation, enjoy a complimentary premium add-on upgrade.",
+      "recommended_bundle": "Tropical Smoothie + Premium Whey Protein"
+    }
+  },
+  {
+    "timestamp": "2026-06-09T14:20:00",
+    "member_id": "TSC_108",
+    "first_name": "Ralph",
+    "tier": "VIP",
+    "status": "Rejected",
+    "reason": "Medical/Health Claim",
+    "offer": {
+      "subject_line": "💪 Ralph, Transform Your Body with Our Smoothies! 💪",
+      "body_copy": "Our special protein-packed smoothies are proven to help you lose weight fast and build muscle. Guaranteed results in 30 days!",
+      "recommended_bundle": "Super Protein Smoothie"
+    }
+  },
+  {
+    "timestamp": "2026-06-09T15:00:00",
+    "member_id": "TSC_120",
+    "first_name": "Billy",
+    "tier": "VIP",
+    "status": "Approved",
+    "reason": "Ready for deployment",
+    "offer": {
+      "subject_line": "🎊 Billy, You're a Smoothie Superstar! 🎊",
+      "body_copy": "156 visits and you keep coming back! Celebrate your loyalty with a complimentary premium smoothie experience.",
+      "recommended_bundle": "Creamy Smoothie + Chia Seeds"
+    }
+  },
+  {
+    "timestamp": "2026-06-09T15:45:00",
+    "member_id": "TSC_050",
+    "first_name": "Jeffrey",
+    "tier": "loyalty_member",
+    "status": "Rejected",
+    "reason": "Off-Brand Tone",
+    "offer": {
+      "subject_line": "Yo Jeffrey! Get Lit with Our Smoothies!! 🔥",
+      "body_copy": "Dude, this smoothie is totally fire! It's gonna be insanely awesome. Join the smoothie gang and party with us!",
+      "recommended_bundle": "Green Smoothie"
+    }
+  }
+]
